@@ -1,26 +1,86 @@
+* {
+  
+}
+
+
 body {
   display: grid;
   grid-template-areas: "a a a"
                        ". b .";
   grid-template-columns: 1fr 500px 1fr;
-  grid-template-rows: 200px auto;
+  grid-template-rows: 60px auto;
 }
 
 body > header {
+  /*-- grid --*/
   grid-area: a;
 
-  background-color: blue;
+  /*--flex--*/
+  display: flex;
+  justify-content: space-between;
+
+  background-color: #ffffff;
 }
+
+header > div, nav  {
+}
+
+/*더 고민할 부분 모든 부분에 공통적용인가? 보통 리스트는 수평배열을 받으므로*/
+section > ul {
+  display: flex;
+}
+
+nav > ul {
+  display: flex;
+}
+
+
+ul > li {
+  display: flex;
+
+  list-style: none;
+  margin: auto 10px;
+
+}
+
+
 
 body > main {
   grid-area: b;
 
-  background-color: red;
+  /*background-color: #7B6967;*/
 }
+
+#intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+figure > img {
+  /*max-width: 100%*/
+}
+
+
+
+ li > a {
+   display: flex;
+  /*max-width: 100%;*/
+}
+
+a > img {
+  flex-grow: 100px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+
+
+
 
 #music_list {
   height: 1000px;
 }
-
-
-
